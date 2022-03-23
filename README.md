@@ -6,6 +6,8 @@ Repeat Section is a row group of fields inside a table that can be repeated by c
 
 I created this generator when i got a lot of projects that have this repeated section, I was re-code it everytime at it was taking lot of time to me that can be useful to do something else, so i decided to create a generator for it so it can make it easier and less time wasting for me, and then i said "why not share it on github? maybe someone facing the same problem?" 
 
+I created this generator using ASP DotNet 5 framewrok, it might not work on version 6 
+
 github URL: https://github.com/BadeeaNashar/MyRepeatSectionCreator
 
 ---------------------------------------------------------------------------------------
