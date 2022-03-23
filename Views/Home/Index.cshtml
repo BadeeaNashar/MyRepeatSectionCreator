@@ -1,0 +1,267 @@
+﻿@{
+    ViewData["Title"] = "Repeated Section Generator";
+}
+
+<div class="row mt-5">
+    <div class="col-md-12 mt-4">
+        <h4 class="card-title text-center">Fill the form for the needed data in the repeated section</h4>
+    </div>
+</div>
+
+@* -- Info of table for repeat section *@
+
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-12">
+        <div class="card main-card">
+            @* <div class="card-header" style="background-color: #1FAF9E;">
+                <h4 class="mb-0 text-white" style="text-align:center; font-family:Times New Roman">Your Repeated Section
+                Information</h4>
+                </div> *@
+            <div class="card-body border-label">
+                <div class="form-body container">
+
+                    <h5 class="text-divider-first"><span>Table Information</span></h5>
+
+                    <div class="row pt-3">
+
+                        <div class="col-lg-6">
+                            <label for="TableName" style="font-weight:bold">Your repeated section name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="TableName" class="form-control" name="TableName"
+                                    placeholder="Write your repeated section name">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h5 class="text-divider"><span>Table tags info for the Repeated Section</span></h5>
+
+                    <div class="row pt-3">
+
+
+                        <div class="col-lg-6">
+                            <label for="Tbody_ClassName" style="font-weight:bold">[Tbody] Class Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="Tbody_ClassName" class="form-control" name="Tbody_ClassName"
+                                    placeholder="Write your 'tbody' class name">
+                            </div>
+                            <span id="Tbody_ClassName_validation"></span>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label for="Tr_ClassName" style="font-weight:bold">[Tr] Class Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="Tr_ClassName" class="form-control" name="Tr_ClassName"
+                                    placeholder="Write your 'tr' class name">
+                            </div>
+                            <span id="Tr_ClassName_validation"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="row pt-3">
+
+                        <div class="col-lg-6">
+                            <label for="Tr_IDName" style="font-weight:bold">[Tr] ID</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="Tr_IDName" class="form-control" name="Tr_IDName"
+                                    placeholder="Write your 'tr' ID">
+                            </div>
+                            <span id="Tr_IDName_validation"></span>
+                        </div>
+
+
+
+                        <div class="col-lg-6">
+                            <label for="ClassObjectName" style="font-weight:bold">Object Name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="ClassObjectName" class="form-control" name="ClassObjectName"
+                                    placeholder="Write repeat section's Object name (sent in your controller)">
+                            </div>
+                            <span id="ClassObjectName_validation"></span>
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+                    <h5 class="text-divider-third"><span>Buttons Information</span></h5>
+
+                    <div class="row pt-3">
+
+                        <div class="col-lg-6">
+                            <label for="AddButtonText" style="font-weight:bold">[Add Button] name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="AddButtonText" class="form-control" name="AddButtonText"
+                                    placeholder="Write your 'Add Button' name">
+                            </div>
+                            <span id="TransferNumber_validation"></span>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label for="DeleteButtonText" style="font-weight:bold;">[Delete Button] name</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="DeleteButtonText" class="form-control" name="DeleteButtonText"
+                                    placeholder="Write your 'Delete Button' name">
+                            </div>
+                            <span id="Email_validation"></span>
+                        </div>
+
+
+                    </div>
+
+
+                    <h5 class="text-divider-fourth"><span>Columns and Rows Inofrmation</span></h5>
+
+                    <div class="row pt-3">
+
+
+                        <div class="col-lg-6">
+                            <label for="NumberOfColumns" style="font-weight:bold">Number of Columns</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="NumberOfColumns" class="form-control" name="NumberOfColumns"
+                                    placeholder="Write your number of columns you need in the table">
+                            </div>
+                            <span id="Email_validation"></span>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <label for="MaximumRows" style="font-weight:bold">Max Repeated Rows</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1">
+                                        <i class="fa-solid fa-info"></i>
+                                    </span>
+                                </div>
+                                <input type="text" id="MaximumRows" class="form-control" name="MaximumRows"
+                                    placeholder="Write your max number of rows you need to be added">
+                            </div>
+                            <span class="text-info" style="color:darkgoldenrod; font-weight: bold;">In case you
+                                don't
+                                need max number of rows you can keep the field empty</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* -- Showing the table after generating -- *@
+
+<div class="mt-4" id="HTML_FROM_JAVASCRIPT">
+
+</div>
+
+@* -- Showing the Repeat Section Script and HTML after generating -- *@
+
+<div class="row d-none mt-4" id="Repeat_Section_Source">
+    <div class="col-lg-6">
+        <div id="accordian-3">
+            <div class="card" style="border: 0;">
+                <a class="btn btn-link card-header text-white left-icon-holder a-tag-js"
+                    style="font-weight:bold; font-size:large; white-space: normal; background-color: #1FAF9E; border-radius: 6rem;"
+                    id="heading11" data-toggle="collapse" data-target="#collapse1" aria-expanded="true"
+                    aria-controls="collapse1" role="button">
+
+                    <label></label>
+                    Show/Hide The JavaScript Code<i class="fas fa-angle-down justify-content-end"></i>
+                </a>
+                <div id="collapse1" class="collapse" aria-labelledby="heading11" data-parent="#accordian-3"
+                    style="overflow-y:scroll; max-height:300px">
+                    <div class="card-body" style="border: 1em;">
+                        <code>
+                                        <pre class="prettyprint notranslate prettyprinted text-left text-info" id="JS_Code" style="text-align:left !important; font-weight:bold"></pre>
+                                    </code>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3 d-none" id="CopyJS">
+                <div class="text-center mt-3 margin-top-2">
+                    <a class="btn bg-info text-white col-md-5" onclick="CopyJSToClipboard()">Copy JavaScript Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-6">
+        <div id="accordian-4">
+            <div class="card" style="border: 0;">
+                <a class="btn btn-link card-header text-white left-icon-holder"
+                    style="font-weight:bold; font-size:large; white-space: normal; background-color: #1FAF9E; border-radius: 6rem;"
+                    id="heading22" data-toggle="collapse" data-target="#collapse2" aria-expanded="true"
+                    aria-controls="collapse2" role="button">
+                    Show/Hide The HTML Code
+                    <label></label>
+                    <i class="fas fa-angle-down"></i>
+                </a>
+                <div id="collapse2" class="collapse" aria-labelledby="heading22" data-parent="#accordian-4"
+                    style="overflow-y:scroll; max-height:300px">
+                    <div class="card-body">
+                        <code>
+                                        <pre class="prettyprint notranslate prettyprinted text-left text-info" id="HTML_Code" style="text-align:left !important; font-weight:bold"></pre>
+                                    </code>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-3 d-none" id="CopyHTML">
+                <div class="text-center mt-3 margin-top-2">
+                    <a class="btn bg-info text-white col-md-5" onclick="CopyHTMLToClipboard()">Copy HTML Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="text-center mt-5 mb-5">
+    <div class="text-center mt-3 margin-top-2">
+        <a class="btn btn-rounded btn-success text-white col-md-3" id="RequestButton"
+            style="font-weight: bold; background-color:#25A07B">Generate</a>
+    </div>
+</div>
