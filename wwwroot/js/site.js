@@ -17,22 +17,21 @@ var NumberOfRows = 1;
 
 $(document).ready(function () {
 
-   
+
     $('#heading11').click(function () {
         var GetCalss = document.getElementById("CopyJS");
 
         if (GetCalss.className.includes("d-block")) {
             $('#CopyJS').removeClass("d-block");
             $('#CopyJS').addClass("d-none");
-        }
-        else {
+        } else {
             $('#CopyJS').removeClass("d-none");
             $('#CopyJS').addClass("d-block");
         }
-        
+
     });
 
-   
+
     $('#heading22').click(function () {
 
         var GetCalss = document.getElementById("CopyHTML");
@@ -40,15 +39,14 @@ $(document).ready(function () {
         if (GetCalss.className.includes("d-block")) {
             $('#CopyHTML').removeClass("d-block");
             $('#CopyHTML').addClass("d-none");
-        }
-        else {
+        } else {
             $('#CopyHTML').removeClass("d-none");
             $('#CopyHTML').addClass("d-block");
         }
 
     });
 
-        //#region  زر الإنشاء
+    //#region  زر الإنشاء
     $('#RequestButton').click(function () {
 
         TBody_ClassName = $('#Tbody_ClassName').val();
@@ -88,12 +86,12 @@ $(document).ready(function () {
             '<div class="row" id="table-buttons"> \n' +
             '<div class="col-lg-3 py-2"> \n' +
             '<a name="" id="AddNewRow" class="btn btn-rounded btn-success text-white btn-block" role="button" onclick="AddRepeatSectionRow()" style="background-color:#2FB98D"> \n' +
-             AddButtonName + ' \n' +
+            AddButtonName + ' \n' +
             '</a> \n' +
             '</div> \n' +
             '<div class="col-lg-3 m-y-2 py-2"> \n' +
             '<a name="" id="DelRow" class="btn btn-secondary btn-block text-white" role="button" onclick="DeleteRepeatSectionRow()"> \n' +
-             DeleteButtonName + ' \n' +
+            DeleteButtonName + ' \n' +
             '</a> \n' +
             '</div> \n' +
             '</div> \n' +
@@ -105,8 +103,8 @@ $(document).ready(function () {
         // تخزين كود الجدول لإظهار السورس كود (الفرق هو زر الإضافة والحذف بدون استدعاء الفنكشات الخاصة بالخدمة الحالية)
 
         HTML_Main_Table_Tag_ToSend = '<div class="card card-outline-info"> \n' +
-            '<div class="card-header" style="background-color: #00AA9E;"> \n' +
-            '<h4 class="mb-0 text-white text-center">Write Your Title Here</h4> \n' +
+            '<div class="card-header" style="background-color: #1FAF9E;""> \n' +
+            '<h4 class="mb-0 text-white text-center">' + TableName + '</h4> \n' +
             '</div> \n' +
             '<div class="card-body"> \n' +
             '<div class="form-body"> \n' +
@@ -130,12 +128,12 @@ $(document).ready(function () {
             '<div class="row" id="table-buttons"> \n' +
             '<div class="col-lg-2 py-2"> \n' +
             '<a name="" id="AddNewRow" class="btn btn-success text-white btn-block" role="button"> \n' +
-            '<i class="fas fa-plus-square"></i>' + AddButtonName + ' \n' +
+             AddButtonName + ' \n' +
             '</a> \n' +
             '</div> \n' +
             '<div class="col-lg-2 m-y-2 py-2"> \n' +
             '<a name="" id="DelRow" class="btn btn-secondary btn-block" role="button"> \n' +
-            '<i class="fas fa-times-circle"></i>' + DeleteButtonName + ' \n' +
+             DeleteButtonName + ' \n' +
             '</a> \n' +
             '</div> \n' +
             '</div> \n' +
@@ -250,7 +248,7 @@ function ColumnsCreatingForJs() {
     var Full_Tr_Columns_HTML_For_Showing_Js = "";
 
     for (let i = 0; i < NumberOfColumns; i++) {
-        Td_Columns_HTML_For_Showing_Js = Td_Columns_HTML_For_Showing_Js + '<td class="text-center"><input type="text" id="YourColumnName' + `' + ${'NumberOfRows'} + '` +'" name="' + ControllerObjectName + '[' + `' + ${'NumberOfRows'} + '` +'].YouClumnName" class="form-control text-center" /></td>';
+        Td_Columns_HTML_For_Showing_Js = Td_Columns_HTML_For_Showing_Js + '<td class="text-center"><input type="text" id="YourColumnName' + `' + ${'NumberOfRows'} + '` + '" name="' + ControllerObjectName + '[' + `' + ${'NumberOfRows'} + '` + '].YouClumnName" class="form-control text-center" /></td>';
     }
 
     Full_Tr_Columns_HTML_For_Showing_Js = '<tr class="' + Tr_ClassName + '" id = "' + Tr_IDName + '" >' + Td_Columns_HTML_For_Showing_Js + '</tr>';
@@ -273,9 +271,7 @@ function AddRepeatSectionRow() {
             div.append('<tr class="' + Tr_ClassName + '" id="' + Tr_IDName + '">' + HTML_REPEAT_MAX + '</tr>');
             NumberOfRows++;
             HTML_REPEAT_MAX = "";
-        }
-
-        else {
+        } else {
             $("#AddNewRow").html("Max reached");
             $("#AddNewRow").addClass("disabled");
         }
